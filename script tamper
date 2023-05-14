@@ -24,12 +24,13 @@ if(e.which == 50) { // +2 de pontos equipa casa
 if(e.which == 51) { // +3 de pontos equipa casa
             document.getElementsByClassName('btn btn-info mb-2 ms-1')[3].click();
         }
-if(e.which == 38) { // START de tempo
-            document.getElementsByClassName('btn btn-info mb-2 ms-1')[8].click();
-        }
-if(e.which == 40) { // STOP de tempo
-            document.getElementsByClassName('btn btn-info mb-2 ms-1')[9].click();
-        }
+if(e.which == 13) { // start stop
+    let element = document.getElementsByClassName("btn btn-info mb-2 ms-1")[8];
+    if(element.classList.contains("disabled"))
+        document.getElementsByClassName("btn btn-info mb-2 ms-1")[9].click();
+    else
+        element.click();
+}
 if(e.which == 220) { // -1 de pontos equipa casa
             document.getElementsByClassName('btn btn-info mb-2 ms-1')[0].click();
 }
